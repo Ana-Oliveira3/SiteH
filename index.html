@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração para Higor</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Fonte usada no texto principal-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Biblioteca Animate.css para animações extras -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <div id="login-screen">
+        <h1>Digite seu nome para entrar</h1>
+        <input type="text" id="name-input" placeholder="Seu nome">
+        <button id="login-btn">Entrar</button>
+        <p id="error-msg" style="color: red; display: none;">Apenas Higor pode entrar!</p>
+    </div>
+
+    <div id="main-content" style="display: none;">
+        <h1>Oi, Higor! Tenho algo para falar...</h1>
+        <div class="card-container">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3Vnc2J3MDJ1dWg1dzhvM2Z1M2VtMXRvMXhlbGo0MWtmdjRldnM3ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/FKPrLmw9t5ZY877s64/giphy.gif" alt="Love you" class="card animate__bounce" id="card">
+            <div id="hearts-container"></div>
+            <p id="message" style="display: none;">Sei que somos amigos há tanto tempo, desde a infância, e a nossa amizade é uma das coisas mais importantes e preciosas na minha vida. É por isso que o que eu tenho para te dizer é algo que pensei muito, porque tem o potencial de mudar as coisas entre nós, e eu tive medo só de pensar em estragar nossa amizade.
+<br>
+<br>
+A verdade é que, de uns dois anos para cá, meus sentimentos por você começaram a se transformar em algo mais profundo. Percebi que o carinho e o companheirismo se misturaram com uma paixão que não consigo mais ignorar. Não sei exatamente quando aconteceu, mas em algum momento, comecei a te ver não apenas como meu amigo, mas também como a pessoa com quem eu gostaria de compartilhar uma vida inteira.
+<br>
+<br>
+Cada risada, cada conversa, cada momento que estamos juntos... tudo isso só reforça o quanto você é especial e a pessoa incrível que você é. Esse sentimento está aqui, de forma honesta e sincera.
+<br>
+<br>
+Eu entendo perfeitamente que você pode não sentir o mesmo, e está tudo bem se for esse o caso. O mais importante para mim era ser honesta com você, porque guardar isso se tornou muito difícil. Não quero que você sinta pressão ou que isso estrague nossa amizade.
+<br>
+<br>
+Seja qual for a sua resposta, eu estarei aqui. Espero, de verdade, que a gente consiga conversar sobre isso no futuro.</p>
+        </div>
+        <!-- GIFs posicionados nos cantos -->
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaTYwZzZnYjBmNnc2dDhtYjE3ZnMzNmlraGk5cGE3NnJoejdkcGY4cCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/KztT2c4u8mYYUiMKdJ/giphy.gif" alt="Love you" class="gif animate__fadeIn" id="gif-top-left">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXgxYThjaG9ybW8yOHV2NzdueXFjN2xiamFnaHlpY3Y1azgwanZ5ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/tpVKvAabWt3G5csMkT/giphy.gif" alt="Love you" class="gif animate__pulse" id="gif-top-right">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXgxYThjaG9ybW8yOHV2NzdueXFjN2xiamFnaHlpY3Y1azgwanZ5ZCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/xT39CXg70nNS0MFNLy/giphy.gif" alt="Love you" class="gif animate__tada" id="gif-bottom-left">
+        <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3c2w1cjUwbmtqcndlcHFpcXcyZm5rMTljaGF3amNldDk1aGZpbmN2dSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/7vDoUoDZHoUQxMPkd7/giphy.gif" alt="Love You" class="gif animate__rubberBand" id="gif-bottom-right">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
