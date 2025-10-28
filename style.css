@@ -1,42 +1,48 @@
 body {
     font-family: Arial, sans-serif;
     background: linear-gradient(to bottom, darkred, rgb(247, 49, 49));
+    background-attachment: fixed; /* Degrade fica fixo ao rolar */
     text-align: center;
     padding: 20px;
-    overflow: hidden; /* Para corações não saírem da tela */
-    position: relative; /* Para posicionar elementos absolutos */
-    height: 100vh; /* Altura total da tela */
+    position: relative;
+    min-height: 100vh; /* Permite expansão se conteúdo for maior */
+    margin: 0;
+    overflow-y: auto;
 }
 
 #login-screen {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza vertical e horizontalmente */
-    background: rgb(255, 255, 255); /* Fundo semi-transparente para destaque */
+    transform: translate(-50%, -50%);
+    background: rgb(255, 255, 255);
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 400px;
 }
 
 input, button {
     padding: 10px;
     margin: 10px;
     border-radius: 10px;
-    border: 5px;
-    box-shadow: black;
+    border: 5px solid black;
+    box-shadow: 0 0 5px black;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button {
-    background: red; /* Cor vermelha */
+    background: red;
     color: white;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para destaque */
-    transition: background 0.3s; /* Transição suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s;
 }
 
 button:hover {
-    background: darkred; /* Tom mais escuro no hover */
+    background: darkred;
 }
 
 .card {
@@ -50,14 +56,13 @@ button:hover {
 }
 
 .gif {
-    width: 100px; /* Menor para não ocupar muito espaço nos cantos */
-    margin: 0; /* Remove margem para posicionamento preciso */
-    position: absolute; /* Posicionamento absoluto */
+    width: 200px;
+    margin: 0;
+    position: absolute;
     animation: blink 2s infinite;
-    width: 200px; /* Animação de piscar */
 }
 
-/* Posicionamento dos GIFs nos cantos */
+/* Posicionamento dos GIFs nos cantos (padrão para telas grandes) */
 #gif-top-left {
     top: 10px;
     left: 10px;
@@ -82,7 +87,7 @@ button:hover {
     width: 200px;
 }
 
-/* Animação de corações (original) */
+/* Animação de corações */
 .heart {
     position: absolute;
     font-size: 50px;
@@ -114,24 +119,91 @@ button:hover {
 }
 
 .card:hover {
-    animation: spin 1s ease-in-out; /* Animação de girar no hover */
+    animation: spin 1s ease-in-out;
 }
 
-#message{
+#message {
     margin-left: 300px;
     margin-right: 300px;
     font-size: 20px;
     font-family: 'Dancing Script', cursive;
-    color:antiquewhite;
+    color: antiquewhite;
 }
 
-#name-input{
-    box-shadow: black;
+#name-input {
+    box-shadow: 0 0 5px black;
     border-radius: 5px;
 }
 
-#main-content{
-    h1{
-        color: antiquewhite;
+#main-content h1 {
+    color: antiquewhite;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .card {
+        width: 150px;
+    }
+    .gif {
+        width: 120px;
+        position: static;
+        display: block;
+        margin: 10px auto;
+    }
+    #gif-top-left, #gif-top-right, #gif-bottom-left, #gif-bottom-right {
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+    #login-screen {
+        padding: 15px;
+    }
+    #message {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 18px;
+    }
+    .heart {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .card {
+        width: 120px;
+    }
+    .gif {
+        width: 100px;
+        position: static;
+        display: block;
+        margin: 10px auto;
+    }
+    #gif-top-left, #gif-top-right, #gif-bottom-left, #gif-bottom-right {
+        position: static;
+        top: auto;
+        left: auto;
+        right: auto;
+    }
+    #login-screen {
+        padding: 10px;
+        width: 90%;
+    }
+    input, button {
+        padding: 8px;
+    }
+    #message {
+        margin-left: 5%;
+        margin-right: 5%;
+        font-size: 16px;
+    }
+    .heart {
+        font-size: 30px;
+    }
+    #main-content h1 {
+        font-size: 24px;
     }
 }
